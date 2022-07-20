@@ -1,1 +1,5 @@
-<h1> Merchants will be displayed here eventually </h1>
+<h1> Merchants </h1>
+
+<ol><% @merchants.each do |merchant|%>
+    <li><%= link_to "#{merchant.name}", "/merchants/#{merchant.id}"%></li>
+<% end%></ol>
