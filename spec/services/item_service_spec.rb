@@ -17,5 +17,11 @@ RSpec.describe ItemService do
                 expect(first_item[:attributes][:merchant_id]).to eq(1)
             end
         end
+        describe '#item_by_id(id)' do
+            xit 'returns a specific item based on id' do
+                item = ItemService.item_by_id("1")
+                require 'pry'; binding.pry
+            end
+        end
     end
 end

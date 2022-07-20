@@ -9,5 +9,12 @@ RSpec.describe ItemFacade do
                 expect(items).to be_all(Item)
             end
         end
+        describe '#item_by_id(id)' do
+            xit 'returns a corresponding item by id' do
+                item = ItemFacade.item_by_id("1")
+
+                expect(item).to be_a(Item)
+            end
+        end
     end
 end
