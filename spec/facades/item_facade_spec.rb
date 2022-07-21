@@ -10,10 +10,10 @@ RSpec.describe ItemFacade do
             end
         end
         describe '#item_by_id(id)' do
-            xit 'returns a corresponding item by id' do
-                item = ItemFacade.item_by_id("1")
+            it 'returns a corresponding item by id' do
+                item = ItemFacade.item_by_id("4")
 
-                expect(item).to be_a(Item)
+                expect(item).to be_an(Item)
             end
         end
     end

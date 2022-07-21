@@ -18,9 +18,15 @@ RSpec.describe ItemService do
             end
         end
         describe '#item_by_id(id)' do
-            xit 'returns a specific item based on id' do
-                item = ItemService.item_by_id("1")
-                require 'pry'; binding.pry
+            it 'returns a specific item based on id' do
+                item = ItemService.item_by_id("4")[:data]
+            
+                expect(item).to be_a(Hash)
+                expect(item[:id]).to eq("4")
+                expect(item[:attributes][:name]).to eq("Item Nemo Facere")
+                expect(item[:attributes][:description]).to eq("Sunt eum id eius magni consequuntur delectus veritatis. Quisquam laborum illo ut ab. Ducimus in est id voluptas autem.")
+                expect(item[:attributes][:unit_price]).to eq(42.91)
+                expect(item[:attributes][:merchant_id]).to eq(1)
             end
         end
     end
